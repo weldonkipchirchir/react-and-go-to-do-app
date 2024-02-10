@@ -16,13 +16,13 @@ func main() {
 	app := fiber.New()
 
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "http://localhost:3000",
+		AllowOrigins: "http://localhost:5173",
 		AllowHeaders: "Origin, Content-Type, Accept",
 	}))
 
 	todos := []Todo{}
 
-	app.Post("/api/todos", func(c *fiber.Ctx) error {
+	app.Post("/api/todos", func(c *fiber.Ctx) error { 
 		todo := &Todo{}
 		if err := c.BodyParser(todo); err != nil {
 			return err

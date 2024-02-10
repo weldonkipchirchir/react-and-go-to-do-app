@@ -1,6 +1,6 @@
 module react-and-go-to-do-app
 
-go 1.21.6
+go 1.21.5
 
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect
